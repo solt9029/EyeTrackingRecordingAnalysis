@@ -1,0 +1,3 @@
+[submodule "GetCircleContainingAllPositions"]
+	path = GetCircleContainingAllPositions
+	url = git@github.com:solt9029/GetCircleContainingAllPositions.git
