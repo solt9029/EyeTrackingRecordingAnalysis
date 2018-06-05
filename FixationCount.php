@@ -38,16 +38,35 @@ for ($first_index = 0; $first_index < count($recordings); $first_index++) {
   for ($second_index = $first_index; $second_index < count($recordings); $second_index++) {
     $recording_stack[] = $recordings[$second_index];
     $circle = $utility->getCircleContainingAllPositions($recording_stack);
-    
-    if ($circle['radius'] > $range_px || $second_index + 1 >= count($recordings)) {
-      if ($circle['radius'] > $range_px) {
-        array_pop($recording_stack); // 最後のやつははみ出てるってことなので削除しよう
-      }
+
+    // 範囲外になった場合
+    if ($circle['radius'] > $range_px) {
+      array_pop($recording_stack);
       $duration = $recording_stack[count($recording_stack) - 1][2] - $recording_stack[0][2];
       if ($duration > MIN_DURATION) {
         $circle = $utility->getCircleContainingAllPositions($recording_stack);
-        $fixations[] = [$circle['center_position'][0], $circle['center_position'][1], $recording_stack[0][2], $recording_stack[count($recording_stack) - 1][2], $duration];
+        $fixations[] = [
+          'center_position' => $circle['center_position'],
+          'start_time' => $recording_stack[0][2],
+          'end_time' => $recording_stack[count($recording_stack) - 1][2],
+          'duration' => $duration
+        ];
         $first_index = $second_index - 1;
+      }
+      break;
+    }
+
+    // 最終行の記録の場合
+    if ($second_index + 1 >= count($recordings)) {
+      $duration = $recording_stack[count($recording_stack) - 1][2] - $recording_stack[0][2];
+      if ($duration > MIN_DURATION) {
+        $fixations[] = [
+          'center_position' => $circle['center_position'],
+          'start_time' => $recording_stack[0][2],
+          'end_time' => $recording_stack[count($recording_stack) - 1][2],
+          'duration' => $duration
+        ];
+        $first_index = $second_index;
       }
       break;
     }
