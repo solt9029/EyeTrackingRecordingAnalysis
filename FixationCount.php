@@ -73,4 +73,9 @@ for ($first_index = 0; $first_index < count($recordings); $first_index++) {
   }
 }
 
-var_dump($fixations);
+$fixation_count = [
+  'count' => count($fixations),
+  'fixations' => $fixations
+];
+
+var_dump($fixation_count);
