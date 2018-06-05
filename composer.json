@@ -1,0 +1,11 @@
+{
+    "name": "shiode/eye-tracker-recording-analysis",
+    "authors": [
+        {
+            "name": "Kenshi Shiode"
+        }
+    ],
+    "require": {
+        "solt9029/php-utility": "^1.0"
+    }
+}
