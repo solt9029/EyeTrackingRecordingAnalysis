@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "solt9029/php-utility",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solt9029/PHPUtility.git",
-                "reference": "e3a5204a3db550a92e3b433ce5e917168e7110e2"
+                "reference": "b8be4284ae981f06c11efe5da33fcc55b25e9f48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solt9029/PHPUtility/zipball/e3a5204a3db550a92e3b433ce5e917168e7110e2",
-                "reference": "e3a5204a3db550a92e3b433ce5e917168e7110e2",
+                "url": "https://api.github.com/repos/solt9029/PHPUtility/zipball/b8be4284ae981f06c11efe5da33fcc55b25e9f48",
+                "reference": "b8be4284ae981f06c11efe5da33fcc55b25e9f48",
                 "shasum": ""
             },
             "type": "library",
@@ -39,7 +39,7 @@
                     "email": "atemu1212@yahoo.co.jp"
                 }
             ],
-            "time": "2018-06-05T03:53:55+00:00"
+            "time": "2018-06-05T09:23:14+00:00"
         }
     ],
     "packages-dev": [],

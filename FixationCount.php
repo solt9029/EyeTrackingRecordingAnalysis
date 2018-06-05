@@ -3,6 +3,5 @@ require __DIR__ . "/vendor/autoload.php";
 require_once './config.php';
 
 use Solt9029\Utility;
-$utility = new Utility();
 
-var_dump($utility->getFixationCount(DPI, PRECISION, DISTANCE, FLICK, MIN_DURATION, './csv/test.csv'));
+var_dump(Utility::getFixationCount(DPI, PRECISION, DISTANCE, FLICK, MIN_DURATION, './csv/test.csv'));

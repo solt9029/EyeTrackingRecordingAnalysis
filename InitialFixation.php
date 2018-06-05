@@ -3,7 +3,6 @@ require __DIR__ . "/vendor/autoload.php";
 require_once './config.php';
 
 use Solt9029\Utility;
-$utility = new Utility();
 
 $output_data = [];
 
@@ -13,7 +12,7 @@ foreach (glob('./csv/*.csv') as $file) {
   }
   $pathinfo = pathinfo($file);
   $exploded_filename = explode('_', $pathinfo['filename']);
-  $initial_fixation = $utility->getInitialFixation(DPI, PRECISION, DISTANCE, FLICK, MIN_DURATION, $file);
+  $initial_fixation = Utility::getInitialFixation(DPI, PRECISION, DISTANCE, FLICK, MIN_DURATION, $file);
   $output_data[] = [$exploded_filename[0], $exploded_filename[1], $initial_fixation['center_position'][0], $initial_fixation['center_position'][1]];
 }
 
