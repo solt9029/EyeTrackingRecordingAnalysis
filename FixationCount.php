@@ -18,7 +18,7 @@ $flick_range_cm = DISTANCE * tan(deg2rad(FLICK)); // 固視微動範囲（cm）
 $range_cm = $precision_error_range_cm + $flick_range_cm; // 計測誤差範囲+固視微動範囲（cm）
 $range_px = $range_cm * $dpc;
 
-$filename = './0_0_eye.csv';
+$filename = './test.csv';
 $file = fopen($filename, 'r');
 $recordings = [];
 while ($line = fgetcsv($file)) {
@@ -38,14 +38,16 @@ for ($first_index = 0; $first_index < count($recordings); $first_index++) {
   for ($second_index = $first_index; $second_index < count($recordings); $second_index++) {
     $recording_stack[] = $recordings[$second_index];
     $circle = $utility->getCircleContainingAllPositions($recording_stack);
-    // 注視範囲を超えていた場合、今までのスタックを全て注視として、クリア
+    
     if ($circle['radius'] > $range_px || $second_index + 1 >= count($recordings)) {
-      array_pop($recording_stack); // 最後のやつははみ出てるってことなので削除しよう
+      if ($circle['radius'] > $range_px) {
+        array_pop($recording_stack); // 最後のやつははみ出てるってことなので削除しよう
+      }
       $duration = $recording_stack[count($recording_stack) - 1][2] - $recording_stack[0][2];
       if ($duration > MIN_DURATION) {
         $circle = $utility->getCircleContainingAllPositions($recording_stack);
         $fixations[] = [$circle['center_position'][0], $circle['center_position'][1], $recording_stack[0][2], $recording_stack[count($recording_stack) - 1][2], $duration];
-        $first_index = $second_index;
+        $first_index = $second_index - 1;
       }
       break;
     }
