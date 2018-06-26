@@ -12,7 +12,7 @@ foreach (glob('./input/*.csv') as $file) {
   $fixations = Utility::getFixations(DPI, PRECISION, DISTANCE, FLICK, MIN_DURATION, $file);
   $output_data = [];
   foreach ($fixations as $fixation) {
-    $output_data[] = [$fixation['center_position'][0], $fixation['center_position'][1], $fixation['duration']];
+    $output_data[] = [$fixation['center_position'][0], $fixation['center_position'][1], $fixation['start_time'], $fixation['end_time'], $fixation['duration']];
   }
   
   mkdir('./output/' . time());
