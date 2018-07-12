@@ -4,6 +4,9 @@ require_once './config.php';
 
 use Solt9029\Utility;
 
+$output_dir = './output/' . time();
+mkdir($output_dir);
+
 foreach (glob('./input/*.csv') as $file) {
   if (!strpos($file, 'eye')) {
     continue;
@@ -14,9 +17,8 @@ foreach (glob('./input/*.csv') as $file) {
   foreach ($fixations as $fixation) {
     $output_data[] = [$fixation['center_position'][0], $fixation['center_position'][1], $fixation['start_time'], $fixation['end_time'], $fixation['duration']];
   }
-  
-  mkdir('./output/' . time());
-  $output_file = './output/' . time() . '/' . $pathinfo['basename'];
+
+  $output_file = $output_dir . '/' . $pathinfo['basename'];
   touch($output_file);
   $file = fopen($output_file, 'w');
   if ($file) {
