@@ -1,5 +1,6 @@
 <?php
-define('DPI', 143.66); // 1インチ当たりのドット数iiyama
+define('DPI', 96.42); // 1インチ当たりのドット数Tobii T60
+// define('DPI', 143.66); // 1インチ当たりのドット数iiyama
 // define('DPI', 220.84); // 1インチ当たりのドット数lavie
 
 define('PRECISION', 0.5); // 計測誤差（度）
