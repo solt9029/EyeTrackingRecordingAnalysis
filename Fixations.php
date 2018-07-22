@@ -4,22 +4,28 @@ require_once './config.php';
 
 use Solt9029\Utility;
 
-$output_dir = './output/' . time();
-mkdir($output_dir);
+$input_dir = 'input';
+$output_dir = 'output';
+$filelist = Utility::getFileList($input_dir);
+$time = time();
 
-foreach (glob('./input/*.csv') as $file) {
+foreach ($filelist as $file) {
   if (!strpos($file, 'eye')) {
     continue;
   }
+
   $pathinfo = pathinfo($file);
+  $output_file = $output_dir . '/' . $time . '/' . mb_substr($file, strlen($input_dir) + 1);
+  if (!Utility::createFile($output_file)) {
+    continue;
+  }
+
   $fixations = Utility::getFixations(DPI, PRECISION, DISTANCE, FLICK, MIN_DURATION, $file);
   $output_data = [];
   foreach ($fixations as $fixation) {
     $output_data[] = [$fixation['center_position'][0], $fixation['center_position'][1], $fixation['start_time'], $fixation['end_time'], $fixation['duration']];
   }
 
-  $output_file = $output_dir . '/' . $pathinfo['basename'];
-  touch($output_file);
   $file = fopen($output_file, 'w');
   if ($file) {
     foreach ($output_data as $line) {
