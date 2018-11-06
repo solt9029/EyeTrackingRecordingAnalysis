@@ -1,0 +1,33 @@
+<?php
+
+$files = [
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181011150642_shimada\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181011151834_shimada\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181011152942_shimada\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181011154214_shimada\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181012105217_syoya\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181012110513_syoya\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181012111708_syoya\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181012112904_syoya\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181012113909_syoya\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013135418_mayoneko\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013140546_mayoneko\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013141731_mayoneko\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013142811_mayoneko\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013143944_mayoneko\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013153242_tasuku\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013154753_tasuku\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013160306_tasuku\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013161831_tasuku\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181013163553_tasuku\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015120133_taki\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015121553_taki\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015123026_taki\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015123926_taki\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015125449_taki\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015132233_ishi\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015133246_ishi\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015134247_ishi\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015135422_ishi\16\InitialFixation.csv',
+  'C:\Users\Shiode\Desktop\Experiment\EyeTrackerRecordingAnalysis\output\prod\analysis\20181015140621_ishi\16\InitialFixation.csv'
+];

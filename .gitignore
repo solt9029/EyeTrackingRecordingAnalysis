@@ -1,2 +1,4 @@
 *.csv
 /vendor
+files.php
+config.php
