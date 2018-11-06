@@ -1,4 +1,5 @@
 <?php
+
 // Fixations.php後のファイル群に対して実行するよ！
 // 例： php FixationCount.php output/1532242523/20180717113505_tasuku/16
 

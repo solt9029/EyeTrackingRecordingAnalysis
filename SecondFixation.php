@@ -1,5 +1,6 @@
 <?php
-// Fixations.php後のファイル群に対して実行するよ！
+
+// Fixations.phpを行った後のファイル群に対して実行するよ！
 // 例： php SecondFixation.php output/1532242523/20180717113505_tasuku/16
 
 require __DIR__ . "/vendor/autoload.php";

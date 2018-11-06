@@ -1,4 +1,14 @@
 <?php
+
+// inputディレクトリに視線データを入れるよ！
+/*
+input/
+  20181019154412_shiode/
+  20181019155540_shiode/
+  20181019160458_shiode/
+*/ 
+// 例： php Fixations.php
+
 require __DIR__ . "/vendor/autoload.php";
 require_once './config.php';
 
